@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_main"
+    android:id="@+id/navigation">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.handson.ui.main.MainFragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_main_to_next"
+            app:destination="@+id/navigation_next" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_next"
+        android:name="com.example.handson.ui.next.NextFragment"
+        tools:layout="@layout/next_fragment">
+        <action
+            android:id="@+id/action_next_to_main"
+            app:destination="@+id/navigation_main" />
+    </fragment>
+
+</navigation>

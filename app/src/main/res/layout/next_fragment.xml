@@ -6,10 +6,10 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.handson.ui.main.MainViewModel" />
+            type="com.example.handson.ui.next.NextViewModel" />
         <variable
             name="fragment"
-            type="com.example.handson.ui.main.MainFragment" />
+            type="com.example.handson.ui.next.NextFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

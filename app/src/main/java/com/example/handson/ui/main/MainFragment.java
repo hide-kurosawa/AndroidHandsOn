@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -35,6 +36,7 @@ public class MainFragment extends Fragment {
 
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
+        binding.setFragment(this);
         binding.setViewModel(mViewModel);
         binding.setLifecycleOwner(getViewLifecycleOwner());
 
@@ -44,9 +46,10 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
 
-        new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            mViewModel.setMessage("Change Text");
-        }, 5000);
+    public void onClick(View view) {
+        // navigationで定義したMainFragmentからNextFragmentに遷移するactionのIDを指定する
+        Navigation.findNavController(view).navigate(R.id.action_main_to_next);
     }
 }

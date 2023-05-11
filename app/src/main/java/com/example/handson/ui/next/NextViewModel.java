@@ -1,10 +1,10 @@
-package com.example.handson.ui.main;
+package com.example.handson.ui.next;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MainViewModel extends ViewModel {
-    private MutableLiveData<String> message = new MutableLiveData<>("This is Main.");
+public class NextViewModel extends ViewModel {
+    private MutableLiveData<String> message = new MutableLiveData<>("This is Next.");
     public MutableLiveData<String> getMessage() {
         return this.message;
     }
